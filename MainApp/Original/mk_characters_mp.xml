@@ -51,7 +51,7 @@
          <equipment slot="Head"
                    id="Item.mk_xbox_helmet" />
         <equipment slot="Body"
-                   id="Item.teutonic_armor" />
+                   id="Item.french_heraldic_tabard" />
 		<equipment slot="Cape"
                    id="Item.swadian_shoulders" />
         <equipment slot="Leg"

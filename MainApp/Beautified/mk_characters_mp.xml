@@ -80,7 +80,7 @@
                 />
                 <equipment 
                     slot = "Body" 
-                    id = "Item.teutonic_armor"
+                    id = "Item.french_heraldic_tabard"
                 />
                 <equipment 
                     slot = "Cape" 

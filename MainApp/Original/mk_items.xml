@@ -852,4 +852,25 @@
            Civilian="true" />
   </Item>
   
+  <Item multiplayer_item="true"
+        id="french_heraldic_tabard"
+        name="{=fre}French Heraldic"
+        mesh="french_heraldic_tabard"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="48"
+             leg_armor="7"
+             arm_armor="5"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false"
+           Civilian="true" />
+  </Item>
 </Items>

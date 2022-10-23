@@ -106,17 +106,19 @@ class Beautifier():
             file.write(self.text)
 
 tkinter.Tk().withdraw()
-file = tkinter.filedialog.askopenfilename(title = "Select a File", initialdir = directories.original, filetypes = (("all files", "*.*"),))
-if not file:
+files = tkinter.filedialog.askopenfilenames(title = "Select a File", initialdir = directories.original, filetypes = (("all files", "*.*"),))
+if not files:
     messagebox.showerror("Error", "Process canceled.")
     sys.exit()
 try:
-    directories.beautified_file.format(basename = os.path.basename(file))
-    beautifier = Beautifier(file)
-    beautifier.write(directories.beautified_file)
+    for file in files:
+        directories.beautified_file.format(basename = os.path.basename(file))
+        beautifier = Beautifier(file)
+        beautifier.write(directories.beautified_file)
+        if messagebox.askyesno("File Complete", "\"{}\" is processed successfuly.\nDo you want to open this file ?".format(directories.beautified_file.basename())):
+            os.system(directories.beautified_file.string())
 except:
     messagebox.showerror("Error", traceback.format_exc())
     sys.exit()
 
-messagebox.showinfo("Process Complete", "\"{}\" is processed successfuly.".format(directories.beautified_file.basename()))
-os.system(directories.beautified_file.string())
+messagebox.showinfo("Process Successful", "{} file(s) processed successfuly.\nClosing the application...".format(len(files)))
