@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPCharacters>
+    <!--!Test Vlandia hafif okcu-->
+    <NPCCharacter 
+        id = "mp_light_ranged_vlandia_hero" 
+        default_group = "Ranged" 
+        level = "5" 
+        name = "{=Dq1sCO1y}English Longbowmen" 
+        occupation = "Soldier" 
+        culture = "Culture.vlandia"
+    >
+        <face>
+            <!--face_key value="18.16;0.3333;0;C0700000001;11111211151111;7010000100000;11101100010100;500202111110;0;0;280000" max_value="23;0.4667;0.2;11FC0FC03C384F;FFFFFFFEFFF7EFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;37FD303FFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "23.16" 
+                weight = "0.3333" 
+                build = "0" 
+                key = "00000C07000000010011111211151111000701000010000000111011000101000000500202111110000000000000000000000000000000000000000000A00000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "25" 
+                weight = "0.4667" 
+                build = "0.2" 
+                key = "0011FC0FC03C384FFFFFFFFEFFF7EFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF00037FD303FFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "15"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "50"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "100"
+            />
+            <skill 
+                id = "Bow" 
+                value = "100"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "100"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mk_english_long_bow"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "CraftedItem.mk_spiked_mace"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.mk_xbox_helmet"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.teutonic_armor"
+                />
+                <equipment 
+                    slot = "Cape" 
+                    id = "Item.swadian_shoulders"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.plateboot"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.sa_1churburghgauntlet"
+                />
+                <equipment 
+                    slot = "Horse" 
+                    id = "Item.mp_vlandia_horse_war"
+                />
+                <equipment 
+                    slot = "HorseHarness" 
+                    id = "Item.mp_chain_barding"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!-- İngiliz Hafif piyade -->
+    <NPCCharacter 
+        id = "mk_english_footman_hero" 
+        default_group = "Infantry" 
+        level = "25" 
+        name = "{=EFootmen}Footman" 
+        occupation = "Soldier" 
+        culture = "Culture.english"
+    >
+        <face>
+            <!--face_key value="34.12;0.4;0.4568;C07C0000001;11111211161111;7010000100000;11101100010100;7600407111110;0;0;180000" max_value="68.79;0.7253;0.6852;11FC0FC03C384F;FFFFFFFEFFFBEFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;ABFD80AFFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "34.12" 
+                weight = "0.4" 
+                build = "0.4568" 
+                key = "00000C07000000010011111211161111000701000010000000111011000101000007600407111110000000000000000000000000000000000000000000500000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "48.79" 
+                weight = "0.7253" 
+                build = "0.6852" 
+                key = "0011FC0FC03C384FFFFFFFFEFFFBEFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF000ABFD80AFFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "15"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "60"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "50"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "0"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mk_english_long_bow"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandian_short_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.vlandia_helmet_o_a"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.armor_roman_military_tunic"
+                />
+                <equipment 
+                    slot = "Cape" 
+                    id = "Item.shoulder_chain_a"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.empire_plated_boots"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!--İngiliz Ağır piyade-->
+    <NPCCharacter 
+        id = "mk_english_sergeant_hero" 
+        default_group = "Infantry" 
+        level = "25" 
+        name = "{=ESergeant}Sergeant" 
+        occupation = "Soldier" 
+        culture = "Culture.vlandia"
+    >
+        <face>
+            <!--face_key value="34.12;0.4;0.4568;C07C0000001;11111211161111;7010000100000;11101100010100;7600407111110;0;0;180000" max_value="68.79;0.7253;0.6852;11FC0FC03C384F;FFFFFFFEFFFBEFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;ABFD80AFFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "34.12" 
+                weight = "0.4" 
+                build = "0.4568" 
+                key = "00000C07000000010011111211161111000701000010000000111011000101000007600407111110000000000000000000000000000000000000000000500000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "68.79" 
+                weight = "0.7253" 
+                build = "0.6852" 
+                key = "0011FC0FC03C384FFFFFFFFEFFFBEFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF000ABFD80AFFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "15"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "75"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "60"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "0"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mk_english_long_bow"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandian_short_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.english_sergeant_helmet_sallet"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.england_heavy"
+                />
+                <equipment 
+                    slot = "Cape" 
+                    id = "Item.swadian_shoulders"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.plateboot"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.sa_1churburghgauntlet"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!-- İngiliz Longbowmen -->
+    <NPCCharacter 
+        id = "mk_english_longbowmen_hero" 
+        default_group = "Ranged" 
+        level = "5" 
+        name = "{=Dq1sCO1y}English Longbowmen" 
+        occupation = "Soldier" 
+        culture = "Culture.english"
+    >
+        <face>
+            <!--face_key value="18.16;0.3333;0;C0700000001;11111211151111;7010000100000;11101100010100;500202111110;0;0;280000" max_value="23;0.4667;0.2;11FC0FC03C384F;FFFFFFFEFFF7EFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;37FD303FFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "23.16" 
+                weight = "0.3333" 
+                build = "0" 
+                key = "00000C07000000010011111211151111000701000010000000111011000101000000500202111110000000000000000000000000000000000000000000A00000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "25" 
+                weight = "0.4667" 
+                build = "0.2" 
+                key = "0011FC0FC03C384FFFFFFFFEFFF7EFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF00037FD303FFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "15"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "50"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "100"
+            />
+            <skill 
+                id = "Bow" 
+                value = "100"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "100"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mk_english_long_bow"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandian_short_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.vlandia_helmet_o_a"
+                />
+                <equipment 
+                    slot = "Cape" 
+                    id = "Item.shoulder_chain_a"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.english_longbow_tunic_a"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.mp_highland_gloves"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.mp_empire_horseman_boots"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!-- İngiliz Lancer -->
+    <NPCCharacter 
+        id = "mk_english_lancer_hero" 
+        default_group = "Cavalry" 
+        level = "15" 
+        name = "{=Cp7dI87a}Vanguard" 
+        occupation = "Soldier" 
+        culture = "Culture.english"
+    >
+        <face>
+            <!--face_key value="18.16;0.3333;0;C0700000001;11111211151111;7010000100000;11101100010100;500202111110;0;0;280000" max_value="23;0.4667;0.2;11FC0FC03C384F;FFFFFFFEFFF7EFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;37FD303FFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "23" 
+                weight = "0.3333" 
+                build = "0" 
+                key = "00000C07000000010011111211151111000701000010000000111011000101000000500202111110000000000000000000000000000000000000000000A00000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "25" 
+                weight = "0.4667" 
+                build = "0.2" 
+                key = "0011FC0FC03C384FFFFFFFFEFFF7EFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF00037FD303FFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "150"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "150"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "100"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mp_western_long_lance"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_western_riders_kite_shield"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.mp_pointed_skullcap_over_mail"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.mp_white_coat_over_mail"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.mp_mail_mitten"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.mp_mail_cavalier_boots"
+                />
+                <equipment 
+                    slot = "Horse" 
+                    id = "Item.mp_vlandia_horse_war"
+                />
+                <equipment 
+                    slot = "HorseHarness" 
+                    id = "Item.mp_chain_barding"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!--İngiliz Man At Arms-->
+    <NPCCharacter 
+        id = "mk_english_manatarms_hero" 
+        default_group = "Cavalry" 
+        level = "30" 
+        name = "{=EMAA}Man at Arms" 
+        occupation = "Soldier" 
+        culture = "Culture.english"
+    >
+        <face>
+            <!--face_key value="34.12;0.4;0.4568;C07C0000001;11111211161111;7010000100000;11101100010100;7600407111110;0;0;180000" max_value="68.79;0.7253;0.6852;11FC0FC03C384F;FFFFFFFEFFFBEFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;ABFD80AFFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "34.12" 
+                weight = "0.4" 
+                build = "0.4568" 
+                key = "00000C07000000010011111211161111000701000010000000111011000101000007600407111110000000000000000000000000000000000000000000500000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "48.79" 
+                weight = "0.7253" 
+                build = "0.6852" 
+                key = "0011FC0FC03C384FFFFFFFFEFFFBEFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF000ABFD80AFFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "150"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "150"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "100"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mp_western_long_lance"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_western_riders_kite_shield"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.armet"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.england_heavy"
+                />
+                <equipment 
+                    slot = "Cape" 
+                    id = "Item.swadian_shoulders"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.plateboot"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.sa_1churburghgauntlet"
+                />
+                <equipment 
+                    slot = "Horse" 
+                    id = "Item.mp_vlandia_horse_war"
+                />
+                <equipment 
+                    slot = "HorseHarness" 
+                    id = "Item.mp_chain_barding"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!--FRANSA-->
+    <!-- Fransız Hafif piyade -->
+    <NPCCharacter 
+        id = "mk_french_footman_hero" 
+        default_group = "Infantry" 
+        level = "25" 
+        name = "{=EFootmen}Footman" 
+        occupation = "Soldier" 
+        culture = "Culture.french"
+    >
+        <face>
+            <!--face_key value="34.12;0.4;0.4568;C07C0000001;11111211161111;7010000100000;11101100010100;7600407111110;0;0;180000" max_value="68.79;0.7253;0.6852;11FC0FC03C384F;FFFFFFFEFFFBEFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;ABFD80AFFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "34.12" 
+                weight = "0.4" 
+                build = "0.4568" 
+                key = "00000C07000000010011111211161111000701000010000000111011000101000007600407111110000000000000000000000000000000000000000000500000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "48.79" 
+                weight = "0.7253" 
+                build = "0.6852" 
+                key = "0011FC0FC03C384FFFFFFFFEFFFBEFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF000ABFD80AFFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "15"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "60"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "50"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "0"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mk_english_long_bow"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandian_short_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.vlandia_helmet_o_a"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.armor_roman_military_tunic"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.empire_plated_boots"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!--Fransız Ağır piyade-->
+    <NPCCharacter 
+        id = "mk_french_sergeant_hero" 
+        default_group = "Infantry" 
+        level = "25" 
+        name = "{=ESergeant}Sergeant" 
+        occupation = "Soldier" 
+        culture = "Culture.french"
+    >
+        <face>
+            <!--face_key value="34.12;0.4;0.4568;C07C0000001;11111211161111;7010000100000;11101100010100;7600407111110;0;0;180000" max_value="68.79;0.7253;0.6852;11FC0FC03C384F;FFFFFFFEFFFBEFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;ABFD80AFFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "34.12" 
+                weight = "0.4" 
+                build = "0.4568" 
+                key = "00000C07000000010011111211161111000701000010000000111011000101000007600407111110000000000000000000000000000000000000000000500000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "68.79" 
+                weight = "0.7253" 
+                build = "0.6852" 
+                key = "0011FC0FC03C384FFFFFFFFEFFFBEFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF000ABFD80AFFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "15"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "75"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "60"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "0"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mk_english_long_bow"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandian_short_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.vlandia_helmet_r_b"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.empire_fabric_armor"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.mp_highland_gloves"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.mp_empire_horseman_boots"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!-- Fransız Arbaletçi -->
+    <NPCCharacter 
+        id = "mk_french_xbowmen_hero" 
+        default_group = "Ranged" 
+        level = "5" 
+        name = "{=Dq1sCO1asy}French XBowmen" 
+        occupation = "Soldier" 
+        culture = "Culture.french"
+    >
+        <face>
+            <!--face_key value="18.16;0.3333;0;C0700000001;11111211151111;7010000100000;11101100010100;500202111110;0;0;280000" max_value="23;0.4667;0.2;11FC0FC03C384F;FFFFFFFEFFF7EFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;37FD303FFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "23.16" 
+                weight = "0.3333" 
+                build = "0" 
+                key = "00000C07000000010011111211151111000701000010000000111011000101000000500202111110000000000000000000000000000000000000000000A00000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "25" 
+                weight = "0.4667" 
+                build = "0.2" 
+                key = "0011FC0FC03C384FFFFFFFFEFFF7EFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF00037FD303FFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "15"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "50"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "100"
+            />
+            <skill 
+                id = "Bow" 
+                value = "100"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "100"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mk_english_long_bow"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_arrows_bodkin"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandian_short_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.mk_xbox_helmet"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.french_crossbow_armor"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.mp_highland_gloves"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.mp_empire_horseman_boots"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!-- Fransız Lancer -->
+    <NPCCharacter 
+        id = "mk_french_lancer_hero" 
+        default_group = "Cavalry" 
+        level = "15" 
+        name = "{=Cp7adI87a}Lancer" 
+        occupation = "Soldier" 
+        culture = "Culture.french"
+    >
+        <face>
+            <!--face_key value="18.16;0.3333;0;C0700000001;11111211151111;7010000100000;11101100010100;500202111110;0;0;280000" max_value="23;0.4667;0.2;11FC0FC03C384F;FFFFFFFEFFF7EFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;37FD303FFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "23" 
+                weight = "0.3333" 
+                build = "0" 
+                key = "00000C07000000010011111211151111000701000010000000111011000101000000500202111110000000000000000000000000000000000000000000A00000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "25" 
+                weight = "0.4667" 
+                build = "0.2" 
+                key = "0011FC0FC03C384FFFFFFFFEFFF7EFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF00037FD303FFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "150"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "150"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "100"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mp_western_long_lance"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_western_riders_kite_shield"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.mp_pointed_skullcap_over_mail"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.mp_white_coat_over_mail"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.mp_mail_mitten"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.mp_mail_cavalier_boots"
+                />
+                <equipment 
+                    slot = "Horse" 
+                    id = "Item.mp_vlandia_horse_war"
+                />
+                <equipment 
+                    slot = "HorseHarness" 
+                    id = "Item.mp_chain_barding"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+    <!--Fransız Man At Arms-->
+    <NPCCharacter 
+        id = "mk_french_manatarms_hero" 
+        default_group = "Cavalry" 
+        level = "30" 
+        name = "{=EMAA}Man at Arms" 
+        occupation = "Soldier" 
+        culture = "Culture.french"
+    >
+        <face>
+            <!--face_key value="34.12;0.4;0.4568;C07C0000001;11111211161111;7010000100000;11101100010100;7600407111110;0;0;180000" max_value="68.79;0.7253;0.6852;11FC0FC03C384F;FFFFFFFEFFFBEFFF;FFFFFFA97EF7FEFF;FFEFFFFFFFFFFFFF;ABFD80AFFFFFF;0;0;309101"/-->
+            <BodyProperties 
+                version = "4" 
+                age = "34.12" 
+                weight = "0.4" 
+                build = "0.4568" 
+                key = "00000C07000000010011111211161111000701000010000000111011000101000007600407111110000000000000000000000000000000000000000000500000"
+            />
+            <BodyPropertiesMax 
+                version = "4" 
+                age = "48.79" 
+                weight = "0.7253" 
+                build = "0.6852" 
+                key = "0011FC0FC03C384FFFFFFFFEFFFBEFFFFFFFFFA97EF7FEFFFFEFFFFFFFFFFFFF000ABFD80AFFFFFF000000000000000000000000000000000000000000C89101"
+            />
+        </face>
+        <skills>
+            <skill 
+                id = "Riding" 
+                value = "150"
+            />
+            <skill 
+                id = "OneHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "TwoHanded" 
+                value = "50"
+            />
+            <skill 
+                id = "Polearm" 
+                value = "150"
+            />
+            <skill 
+                id = "Crossbow" 
+                value = "20"
+            />
+            <skill 
+                id = "Bow" 
+                value = "20"
+            />
+            <skill 
+                id = "Throwing" 
+                value = "100"
+            />
+        </skills>
+        <Equipments>
+            <EquipmentRoster>
+                <equipment 
+                    slot = "Item0" 
+                    id = "Item.mp_western_long_lance"
+                />
+                <equipment 
+                    slot = "Item1" 
+                    id = "Item.mp_western_riders_kite_shield"
+                />
+                <equipment 
+                    slot = "Item2" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Item3" 
+                    id = "Item.mp_vlandia_cavalry_sword"
+                />
+                <equipment 
+                    slot = "Head" 
+                    id = "Item.mp_pointed_skullcap_over_mail"
+                />
+                <equipment 
+                    slot = "Body" 
+                    id = "Item.mp_white_coat_over_mail"
+                />
+                <equipment 
+                    slot = "Gloves" 
+                    id = "Item.mp_mail_mitten"
+                />
+                <equipment 
+                    slot = "Leg" 
+                    id = "Item.mp_mail_cavalier_boots"
+                />
+                <equipment 
+                    slot = "Horse" 
+                    id = "Item.mp_vlandia_horse_war"
+                />
+                <equipment 
+                    slot = "HorseHarness" 
+                    id = "Item.mp_chain_barding"
+                />
+            </EquipmentRoster>
+        </Equipments>
+    </NPCCharacter>
+</MPCharacters>
