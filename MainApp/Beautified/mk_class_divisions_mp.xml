@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- multiplier: Captain only: This number is multiplied with the BotsPerFormation setting to get the final amount of troops to spawn. -->
+<!-- cost: Skirmish only: The gold cost of this troop. -->
+<!-- armor: This armor value is applied to every body part, regardless of equipment. -->
+<!-- movement_speed: Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_speed_multiplier' (in native_parameters.xml). Human only. -->
+<!-- combat_movement_speed: Goes from 0.0 to 1.0. This will be multiplied with 'movement_speed' during combat. Human only. -->
+<!-- acceleration: Goes from 0.0 to 1.0. This will be multiplied with 'bipedal_acceleration_multiplier'. Human only. -->
+<!-- hitpoints: Goes from 1 to infinity. Default is 100. Human only. -->
+<MPClassDivisions>
+    <!-- English -->
+    <MPClassDivision 
+        id = "mk_english_footman" 
+        hero = "mk_english_footman_hero" 
+        troop = "mk_english_footman_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline}{newline}+40% Speed Bonus Damage on Foot{newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline}{newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <MPClassDivision 
+        id = "mk_english_sergeant" 
+        hero = "mk_english_sergeant_hero" 
+        troop = "mk_english_sergeant_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <MPClassDivision 
+        id = "mk_english_longbowmen" 
+        hero = "mk_english_longbowmen_hero" 
+        troop = "mk_english_longbowmen_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- İngiliz -->
+    <MPClassDivision 
+        id = "mk_english_lancer" 
+        hero = "mk_english_lancer_hero" 
+        troop = "mk_english_lancer_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- İngiliz -->
+    <MPClassDivision 
+        id = "mk_english_manatarms" 
+        hero = "mk_english_manatarms_hero" 
+        troop = "mk_english_manatarms_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- Fransız -->
+    <MPClassDivision 
+        id = "mk_french_footman" 
+        hero = "mk_french_footman_hero" 
+        troop = "mk_french_footman_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- Fransız -->
+    <MPClassDivision 
+        id = "mk_french_sergeant" 
+        hero = "mk_french_sergeant_hero" 
+        troop = "mk_french_sergeant_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- Fransız -->
+    <MPClassDivision 
+        id = "mk_french_xbowmen" 
+        hero = "mk_french_xbowmen_hero" 
+        troop = "mk_french_xbowmen_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- Fransız -->
+    <MPClassDivision 
+        id = "mk_french_lancer" 
+        hero = "mk_french_lancer_hero" 
+        troop = "mk_french_lancer_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+    <!-- Fransız -->
+    <MPClassDivision 
+        id = "mk_french_manatarms" 
+        hero = "mk_french_manatarms_hero" 
+        troop = "mk_french_manatarms_hero" 
+        hero_idle_anim = "act_vlandia_mp_voulgier_idle" 
+        troop_idle_anim = "act_idle_spear_1_left_stance" 
+        multiplier = "0.64" 
+        cost = "130" 
+        icon = "Special_Axeman" 
+        melee_ai = "50" 
+        ranged_ai = "50" 
+        armor = "12" 
+        movement_speed = "0.81" 
+        combat_movement_speed = "0.8" 
+        acceleration = "2.3" 
+        hitpoints = "100"
+    >
+        <Perks>
+            <!--First perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=zbsajPMp}Voulge" 
+                description = "{=tbDajRvE}Short axe like polearm. Cuts through armor, flesh and morale." 
+                icon = "PerkTwoHandedAxe" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_polearm"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=trR3odix}Replaces the Voulge with a Sword, Shield and Spear combination. Grants versatility and protection.{newline} {newline}Grants Sword{newline}Grants Shield {newline}Grants Spear" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item2" 
+                    item = "mp_western_spear"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=8zwWEfSs}Medium Infantry" 
+                description = "{=uCJlbbVD}Replaces the Voulge with a Sword and Shield. Grants more troops, versatility and protection.{newline} {newline}Grants Long Sword{newline}Grants Shield{newline}+2 Additional Troops" 
+                hero_idle_anim = "act_vlandia_mp_voulgier_swordandshieldperk_idle" 
+                icon = "PerkLargerShields" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_long_sword"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item1" 
+                    item = "mp_western_kite_shield"
+                />
+                <OnSpawnEffect 
+                    type = "TroopCountOnSpawn" 
+                    value = "3.0"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=Dj64aJKQ}Billhook" 
+                description = "{=GdmMrIWm}Grants a Billhook, effective at long range infantry support, two handed." 
+                icon = "PerkPolearms" 
+                perk_list = "1"
+            >
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Item0" 
+                    item = "mp_vlandian_halberd_lol"
+                />
+            </Perk>
+            <!-- Second perks-->
+            <Perk 
+                game_mode = "all" 
+                name = "{=rJFGyaBS}Moloch" 
+                description = "{=8Ca2z4HB}You are a force to be reckoned with, you deal more damage to mobile targets and shields.{newline} {newline}+40% Speed Bonus Damage on Foot {newline}+25% Bonus Damage on Shields" 
+                icon = "PerkFightingMadness" 
+                perk_list = "2"
+            >
+                <ConditionalEffect>
+                    <Conditions>
+                        <Condition 
+                            type = "AgentStatus" 
+                            agent_status = "OnFoot"
+                        />
+                    </Conditions>
+                    <Effects>
+                        <Effect 
+                            type = "SpeedBonus" 
+                            value = "1.25" 
+                            is_ratio = "true"
+                        />
+                        <Effect 
+                            type = "ShieldDamage" 
+                            value = "0.25"
+                        />
+                    </Effects>
+                </ConditionalEffect>
+            </Perk>
+            <Perk 
+                game_mode = "Battle, NewBattle, ClassicBattle, Skirmish, Siege, TeamDeathmatch, Duel" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LiRwNCZA}You are athletic, you run faster.{newline} {newline}+5% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.05" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "Captain" 
+                name = "{=0TtCRwmr}Athletic" 
+                description = "{=LSO3BsYq}You are athletic, you run faster.{newline} {newline}+7% Maximum Running Speed" 
+                icon = "PerkFleetFooted" 
+                perk_list = "2"
+            >
+                <Effect 
+                    type = "DrivenProperty" 
+                    value = "0.07" 
+                    driven_property = "MaxSpeedMultiplier" 
+                    is_ratio = "true"
+                />
+            </Perk>
+            <Perk 
+                game_mode = "all" 
+                name = "{=DlKYZgA3}Improved Armor" 
+                description = "{=IUsT27oV}Provides +9 armor." 
+                icon = "PerkToughness" 
+                perk_list = "2"
+            >
+                <OnSpawnEffect 
+                    type = "ArmorOnSpawn" 
+                    value = "9"
+                />
+                <OnSpawnEffect 
+                    type = "AlternativeEquipmentOnSpawn" 
+                    slot = "Cape" 
+                    item = "mp_hood" 
+                    target = "Player"
+                />
+                <RandomOnSpawnEffect 
+                    type = "RandomEquipmentOnSpawn" 
+                    target = "Troops"
+                >
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_peaked_helmet_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_strapped_mail_chausses"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_mail_mitten"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_skullcap_over_mail_coif"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Body" 
+                            item = "mp_banded_leather_over_mail"
+                        />
+                    </Group>
+                    <Group>
+                        <Item 
+                            slot = "Head" 
+                            item = "mp_segmented_cervelliere_over_mail"
+                        />
+                        <Item 
+                            slot = "Cape" 
+                            item = "mp_hood"
+                        />
+                        <Item 
+                            slot = "Leg" 
+                            item = "mp_mail_cavalier_boots"
+                        />
+                        <Item 
+                            slot = "Gloves" 
+                            item = "mp_reinforced_padded_mitten"
+                        />
+                    </Group>
+                </RandomOnSpawnEffect>
+            </Perk>
+        </Perks>
+    </MPClassDivision>
+</MPClassDivisions>

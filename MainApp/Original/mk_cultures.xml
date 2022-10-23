@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BasicCultures>
+	<Culture
+		id="vlandia"
+		name="{=englishfaction}English"
+		is_main_culture="true"
+		default_face_key="000fa92e90004202aced5d976886573d5d679585a376fdd605877a7764b8987c00000000000007520000037f0000000f00000037049140010000000000000000"
+		color="FF8E2A1C" color2="FFECE8DD"
+		cloth_alternative_color1="FF160D0D" cloth_alternative_color2="FFF3D22E"
+		banner_background_color1="FF8E2A1C" banner_foreground_color1="FFDEA940"
+		banner_background_color2="FF160D0D" banner_foreground_color2="FFF3D22E"
+		faction_banner_key="2.0.14.3000.2700.0.0.1.0.0.141.7.149.375.375.764.934.1.0.0.141.7.149.375.375.764.764.1.0.0.141.7.149.375.375.764.594.1.0.0"
+	/>
+	<Culture
+		id="empire"
+		name="{=frenchfaction}French"
+		is_main_culture="true"
+		default_face_key="000fa92e90004202aced5d976886573d5d679585a376fdd605877a7764b8987c00000000000007520000037f0000000f00000037049140010000000000000000"
+		color="FF2E4D86" color2="FFDEA940"
+		cloth_alternative_color1="FFEBEEEF" cloth_alternative_color2="FFDEA940"
+		banner_background_color1="FF2E4D86" banner_foreground_color1="FFDEA940"
+		banner_background_color2="FFEBEEEF" banner_foreground_color2="FFDEA940"
+		faction_banner_key="2.0.146.3000.2700.0.0.1.0.0.424.7.149.220.220.764.944.1.0.0.424.7.149.220.220.864.784.1.0.0.424.7.149.220.220.664.784.1.0.0.424.7.149.220.220.934.594.1.0.0.424.7.149.220.220.764.594.1.0.0.424.7.149.220.220.594.594.1.0.0"
+	/>
+	<Culture
+		id="english"
+		name="{=englishfaction}English"
+		is_main_culture="true"
+		default_face_key="000fa92e90004202aced5d976886573d5d679585a376fdd605877a7764b8987c00000000000007520000037f0000000f00000037049140010000000000000000"
+		color="FF8E2A1C" color2="FFECE8DD"
+		cloth_alternative_color1="FF160D0D" cloth_alternative_color2="FFF3D22E"
+		banner_background_color1="FF8E2A1C" banner_foreground_color1="FFDEA940"
+		banner_background_color2="FF160D0D" banner_foreground_color2="FFF3D22E"
+		faction_banner_key="2.0.14.3000.2700.0.0.1.0.0.141.7.149.375.375.764.934.1.0.0.141.7.149.375.375.764.764.1.0.0.141.7.149.375.375.764.594.1.0.0"
+	/>
+	<Culture
+		id="french"
+		name="{=frenchfaction}French"
+		is_main_culture="true"
+		default_face_key="000fa92e90004202aced5d976886573d5d679585a376fdd605877a7764b8987c00000000000007520000037f0000000f00000037049140010000000000000000"
+		color="FF2E4D86" color2="FFDEA940"
+		cloth_alternative_color1="FFEBEEEF" cloth_alternative_color2="FFDEA940"
+		banner_background_color1="FF2E4D86" banner_foreground_color1="FFDEA940"
+		banner_background_color2="FFEBEEEF" banner_foreground_color2="FFDEA940"
+		faction_banner_key="2.0.146.3000.2700.0.0.1.0.0.424.7.149.220.220.764.944.1.0.0.424.7.149.220.220.864.784.1.0.0.424.7.149.220.220.664.784.1.0.0.424.7.149.220.220.934.594.1.0.0.424.7.149.220.220.764.594.1.0.0.424.7.149.220.220.594.594.1.0.0"
+	/>
+</BasicCultures>

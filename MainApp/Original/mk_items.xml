@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<CraftedItem
+		multiplayer_item="true"
+		id="mk_spiked_mace"
+		name="{=spiked_mace}Spiked Mace"
+		crafting_template="Mace"
+		value="999"
+		is_merchandise="false"
+		culture="Culture.neutral_culture"
+	>
+		<Pieces>
+			<Piece
+				id="mp_vlandian_mace_head"
+				Type="Blade"
+				scale_factor="100"
+			/>
+			<Piece
+				id="mp_vlandia_mace_handle"
+				Type="Handle"
+				scale_factor="104"
+			/>
+		</Pieces>
+	</CraftedItem>
+  <Item multiplayer_item="true"
+        id="mp_full_helm_over_padded_cap"
+        name="{=qVj5NqrL}Full Helm over Padded Cap"
+        subtype="head_armor"
+        mesh="sallet_winged"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="4.8"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="48"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             modifier_group="plate"
+             material_type="Plate"
+             beard_cover_type="type3" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_vlandia_chainmail"
+        name="{=TziEtAIK}Vlandia Chainmail"
+        mesh="swadian_plate_armor"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="23"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="37"
+             leg_armor="12"
+             arm_armor="4"
+             has_gender_variations="false"
+             covers_body="true"
+             modifier_group="chain"
+             material_type="Chainmail" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_hood"
+        name="{=lbVB6KPl}Hood"
+        culture="Culture.neutral_culture"
+        mesh="swadian_shoulders"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="0.4"
+        Type="Cape">
+    <ItemComponent>
+      <Armor body_armor="2"
+             modifier_group="cloth_unarmoured"
+             material_type="Cloth" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_leather_cavalier_boots"
+        name="{=oEvhhNNR}Leather Cavalier Boots"
+        mesh="plateboot"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="0.9"
+        Type="LegArmor">
+    <ItemComponent>
+      <Armor leg_armor="10"
+             covers_legs="true"
+             modifier_group="leather"
+             material_type="Leather" />
+    </ItemComponent>
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_mail_mitten"
+        name="{=g51zVsKU}Mail Mittens"
+        mesh="sa_1churburghgauntlet"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="0.4"
+        Type="HandArmor">
+    <ItemComponent>
+      <Armor arm_armor="8"
+             covers_hands="true"
+             modifier_group="chain"
+             material_type="Chainmail" />
+    </ItemComponent>
+  </Item>
+  <Item id="plate_boots" name="Plate Boots" mesh="plateboot" culture="Culture.vlandia" weight="1.8" difficulty="0" appearance="1" value="30000" Type="LegArmor">
+    <ItemComponent>
+      <Armor leg_armor="28" covers_legs="true" modifier_group="plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags />
+  </Item>
+  <Item id="swadian_plate_armor" name="Western Plate Armor" mesh="swadian_plate_armor" is_merchandise="true" subtype="body_armor" value="100000" culture="Culture.vlandia" weight="29" difficulty="0" appearance="1" Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="58" leg_armor="25" arm_armor="25" covers_body="true" modifier_group="Plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item> 
+  <Item id="swadian_shoulders" name="Western Shoulder Plates" mesh="swadian_shoulders" culture="Culture.vlandia" weight="3.6" appearance="2" Type="Cape">
+    <ItemComponent>
+      <Armor body_armor="20" arm_armor="10" modifier_group="plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags />
+  </Item>
+  <Item id="sa_1ChurburghGauntlet" name="Plate Mittens" mesh="sa_1churburghgauntlet" is_merchandise="true" subtype="body_armor" value="35000" culture="Culture.vlandia" weight="2.9" difficulty="0" appearance="1" Type="HandArmor">
+    <ItemComponent>
+    <Armor body_armor="0" leg_armor="0" arm_armor="30" covers_hands="true" modifier_group="Plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_legionary_mail"
+        name="{=PTKyNh2O}Legionary Mail"
+        mesh="sa_brigandine_plate2"
+        subtype="body_armor"
+        culture="Culture.neutral_culture"
+        weight="9.5"
+        value="999"
+        is_merchandise="false"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="29"
+             leg_armor="7"
+             arm_armor="2"
+             covers_body="true"
+             modifier_group="chain"
+             material_type="Chainmail" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item id="sa_1ChurburghTorso" name="Plate Cuirass" mesh="sa_1churburghtorso" is_merchandise="true" subtype="body_armor" value="90000" culture="Culture.vlandia" weight="30" difficulty="0" appearance="1" Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="55" leg_armor="30" arm_armor="30" covers_body="true" modifier_group="Plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+   <Item multiplayer_item="true"
+        id="mp_sleeveless_padded_short_coat"
+        name="{=bz5lXkHS}Sleeveless Padded Short Coat"
+        mesh="sa_brigandine1"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="11.5"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="19"
+             leg_armor="6"
+             arm_armor="2"
+             has_gender_variations="true"
+             covers_body="true"
+             modifier_group="cloth"
+             material_type="Cloth" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_segmented_skullcap_over_laced_coif"
+        name="{=VylHwqVq}Segmented Skullcap over Laced Coif"
+        mesh="sallet_no_visor"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="1.2"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="18"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             beard_cover_type="type2"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_padded_mitten"
+        name="{=J3YHMkL3}Padded Mittens"
+        mesh="sa_churburghgauntlet"
+        culture="Culture.empire"
+        is_merchandise="false"
+        weight="0.6"
+        difficulty="0"
+        appearance="0.3"
+        Type="HandArmor">
+    <ItemComponent>
+      <Armor arm_armor="7"
+             covers_hands="true"
+             modifier_group="cloth"
+             material_type="Cloth" />
+    </ItemComponent>
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_leather_cavalier_boots"
+        name="{=oEvhhNNR}Leather Cavalier Boots"
+        mesh="cav_boots"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="0.9"
+        Type="LegArmor">
+    <ItemComponent>
+      <Armor leg_armor="10"
+             covers_legs="true"
+             modifier_group="leather"
+             material_type="Leather" />
+    </ItemComponent>
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_ironlame_nasalhelm_over_imperial_mail"
+        name="{=DbavaIis}Iron Nasalhelm over Mail"
+        subtype="head_armor"
+        mesh="sa_churburghhelm"
+        culture="Culture.empire"
+        weight="3.3"
+        appearance="2"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="48"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             beard_cover_type="type2"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_empire_warrior_padded_armor_shoulder"
+        name="{=xn5CfwON}Padded Warrior Shoulders"
+        mesh="swadian_shoulders"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="1.6"
+        Type="Cape">
+    <ItemComponent>
+      <Armor body_armor="6"
+             modifier_group="leather"
+             material_type="Leather" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_reinforced_leather_vambraces"
+        name="{=CXnhFf1t}Reinforced Leather Vambraces"
+        mesh="sa_2churburghgauntlet"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="0.3"
+        Type="HandArmor">
+    <ItemComponent>
+      <Armor arm_armor="11"
+             covers_hands="false"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_mail_chausses"
+        name="{=DoiwC1Qa}Mail Chausses"
+        mesh="plateboot"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="2.9"
+        Type="LegArmor">
+    <ItemComponent>
+      <Armor leg_armor="13"
+             covers_legs="true"
+             modifier_group="chain"
+             material_type="Chainmail" />
+    </ItemComponent>
+  </Item>
+  <Item id="Sa_brigandine1" name="red Brigandine with armpads" mesh="sa_brigandine1" is_merchandise="true" subtype="body_armor" value="25000" culture="Culture.vlandia" weight="12" difficulty="0" appearance="3" Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="32" leg_armor="12" arm_armor="18" covers_body="true" modifier_group="plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item> 
+  <Item id="sallet_no_visor" name="Western open Sallet" subtype="head_armor" mesh="sallet_no_visor" culture="Culture.vlandia" weight="4.5" difficulty="0" appearance="1" value="40000" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="42" has_gender_variations="false" hair_cover_type="all" modifier_group="plate" material_type="Plate" beard_cover_type="all" />
+    </ItemComponent>
+    <Flags UseTeamColor="false" />	
+  </Item>
+  <Item id="sa_ChurburghGauntlet" name="Trimmed Plate Mittens" mesh="sa_churburghgauntlet" is_merchandise="true" subtype="body_armor" value="39000" culture="Culture.vlandia" weight="2.9" difficulty="0" appearance="1" Type="HandArmor">
+    <ItemComponent>
+    <Armor body_armor="0" leg_armor="0" arm_armor="30" covers_hands="true" modifier_group="Plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="Sa_brigandine_plate2" name="Reinforced blue Brigandine with mail" mesh="sa_brigandine_plate2" is_merchandise="true" subtype="body_armor" value="70000" culture="Culture.vlandia" weight="25" difficulty="0" appearance="3" Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="46" leg_armor="30" arm_armor="30" covers_body="true" modifier_group="plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item> 
+  <Item id="engraved_swadian_shoulders" name="Western Ornate Shoulder Plates" mesh="engraved_swadian_shoulders" is_merchandise="true" culture="Culture.vlandia" weight="3.6" appearance="2" Type="Cape">
+    <ItemComponent>
+      <Armor body_armor="20" arm_armor="10" modifier_group="plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags />
+  </Item>
+  <Item id="sa_ChurburghHelm" name="Trimmed Hounskull Bascinet" subtype="head_armor" mesh="sa_churburghhelm" culture="Culture.vlandia" weight="4.5" difficulty="0" appearance="1" value="62000" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="57" has_gender_variations="false" hair_cover_type="all" modifier_group="plate" material_type="Plate" beard_cover_type="all" />
+    </ItemComponent>
+    <Flags UseTeamColor="false" />	
+  </Item>
+  <Item id="sa_2ChurburghGauntlet" name="Blackend Plate Mittens" mesh="sa_2churburghgauntlet" is_merchandise="true" subtype="body_armor" value="39000" culture="Culture.vlandia" weight="2.9" difficulty="0" appearance="1" Type="HandArmor">
+    <ItemComponent>
+    <Armor body_armor="0" leg_armor="0" arm_armor="30" covers_hands="true" modifier_group="Plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="plate_boots" name="Plate Boots" mesh="plateboot" culture="Culture.vlandia" weight="1.8" difficulty="0" appearance="1" value="30000" Type="LegArmor">
+    <ItemComponent>
+      <Armor leg_armor="28" covers_legs="true" modifier_group="plate" material_type="Plate" />
+    </ItemComponent>
+    <Flags />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_bandit_leather_water_flask"
+        name="{=8hDoWBIa}Commoner Shirt"
+        mesh="vlandia_leather_armor"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="7"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="4"
+             leg_armor="1"
+             arm_armor="1"
+             has_gender_variations="true"
+             covers_body="false"
+             body_mesh_type="shoulders"
+             modifier_group="cloth_unarmoured"
+             material_type="Cloth" />
+    </ItemComponent>
+    <Flags UseTeamColor="true"
+           Civilian="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_imperial_lamellar"
+        name="{=LMo6MaQS}Cataphract Lamellar Armor"
+        mesh="mail_with_tabbard1"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="22.1"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="43"
+             leg_armor="17"
+             arm_armor="11"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_imperial_goggled_helmet"
+        name="{=5bEHZ2z1}Imperial Goggled Helmet"
+        mesh="engraved_vlandian_helm_with_visor"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="4.2"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="38"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             beard_cover_type="type2"
+             modifier_group="chain"
+             material_type="Chainmail" />
+    </ItemComponent>
+  </Item>
+  <Item multiplayer_item="true"
+        id="mp_lamellar_plate_gauntlets"
+        name="{=XGX6DbFL}Lamellar Plate Gauntlets"
+        mesh="sa_2churburghgauntlet"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="1.8"
+        Type="HandArmor">
+    <ItemComponent>
+      <Armor arm_armor="20"
+             covers_hands="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+  </Item>
+  <Item id="mk_english_long_bow"
+        name="{=englishlongbow}English Longbow"
+        body_name="bo_composite_longbow_e"
+        mesh="longbow_e"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="2.0"
+        difficulty="0"
+        Type="Bow"
+        item_holsters="bow_back:bow_back_2:bow_hip:bow_hip_2">
+    <ItemComponent>
+      <Weapon weapon_class="Bow"
+              ammo_class="Arrow"
+              missile_speed="68"
+              accuracy="100"
+              thrust_damage="55"
+              thrust_speed="75"
+              speed_rating="86"
+              weapon_length="95"
+              ammo_limit="1"
+              thrust_damage_type="Pierce"
+              item_usage="long_bow"
+              physics_material="wood_weapon"
+              center_of_mass="0.15,0,0">
+        <WeaponFlags RangedWeapon="true"
+                     HasString="true"
+                     StringHeldByHand="true"
+                     NotUsableWithOneHand="true"
+                     TwoHandIdleOnMount="true"
+                     AutoReload="true"
+                     UnloadWhenSheathed="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags ForceAttachOffHandPrimaryItemBone="true" />
+  </Item>
+  <Item id="mail_with_tabbard1" name="Mail With Tabbard" mesh="mail_with_tabbard1" is_merchandise="true" subtype="body_armor" value="40000" culture="Culture.vlandia" weight="29" difficulty="0" appearance="1" Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="36" leg_armor="15" arm_armor="20" covers_body="true" modifier_group="Chainmail" material_type="Chainmail" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item id="great_prankh_helm" name="Round Top Great Helmet" subtype="head_armor" mesh="great_prankh_helm" culture="Culture.vlandia" weight="4.5" difficulty="0" appearance="1" value="60000" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="60" has_gender_variations="false" hair_cover_type="all" modifier_group="plate" material_type="Plate" beard_cover_type="all" />
+    </ItemComponent>	
+	    <Flags UseTeamColor="false" />
+  </Item>
+  
+  <Item multiplayer_item="true"
+        id="coat_of_plates10_c"
+        name="{=coata}Muthis Zirh"
+        mesh="coat_of_plates10_c"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="22.1"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="45"
+             leg_armor="17"
+             arm_armor="11"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="empire_fabric_armor"
+        name="{=EnglishArmor}English Longbow Armor "
+        mesh="empire_fabric_armor"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="22.1"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="35"
+             leg_armor="17"
+             arm_armor="11"
+             covers_body="true"
+             modifier_group="leather"
+             material_type="Leather" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="vlandia_helmet_r_b"
+        name="{=Englishhelmet}English Longbow Helmet "
+        mesh="vlandia_helmet_r_b"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="22.1"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="38"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             beard_cover_type="type2"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <!-- Fransız footman-->
+  <Item multiplayer_item="true"
+        id="vlandia_helmet_o_a"
+        name="{=Footmanhelmet}Footman Helmet"
+        mesh="vlandia_helmet_o_a"
+        culture="Culture.vlandia"
+        value="999"
+        weight="2.6"
+        appearance="0.5"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="21"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             beard_cover_type="type3"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="armor_roman_military_tunic"
+        name="{=Footmanarmor}Footman Armor"
+        mesh="mail_with_tabbard5"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="11"
+             leg_armor="3"
+             arm_armor="2"
+             covers_body="true"
+             modifier_group="cloth_unarmoured"
+             material_type="Cloth" />
+    </ItemComponent>
+    <Flags UseTeamColor="true"
+           Civilian="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="empire_plated_boots"
+        name="{=Footmanboots}Footman Boots"
+        mesh="empire_plated_boots"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="2.7"
+        Type="LegArmor">
+    <ItemComponent>
+      <Armor leg_armor="14"
+             covers_legs="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+    <Item multiplayer_item="true"
+        id="shoulder_chain_a"
+        name="{=Footmanshoulders}Footman Shoulders"
+        mesh="chain_shoulders"
+        culture="Culture.sturgia"
+        subtype="body_armor"
+        is_merchandise="false"
+        weight="2.7"
+        difficulty="0"
+        appearance="0.6"
+        Type="Cape">
+    <ItemComponent>
+      <Armor body_armor="11"
+             modifier_group="chain"
+             material_type="Chainmail" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="sa_1churburghtorso"
+        name="{=Englishsergeantarmor}English Sergeant Armor"
+        mesh="sa_1churburghtorso"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="11"
+             leg_armor="3"
+             arm_armor="2"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true"
+           Civilian="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="armet"
+        name="{=Englishsergeanthelmet}English Sergeant Helmet"
+        mesh="armet"
+        culture="Culture.vlandia"
+        value="999"
+        weight="2.6"
+        appearance="0.5"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="21"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             beard_cover_type="type3"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="swadian_shoulders"
+        name="{=Englishsergeantshoulders}English Sergeant Shoulders"
+        culture="Culture.neutral_culture"
+        mesh="swadian_shoulders"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="0.4"
+        Type="Cape">
+    <ItemComponent>
+      <Armor body_armor="2"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+  <Item multiplayer_item="true"
+        id="sa_1churburghgauntlet"
+        name="{=Englishsergeantgauntlets}English Sergeant Gauntlets"
+        mesh="sa_1churburghgauntlet"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="1.8"
+        Type="HandArmor">
+    <ItemComponent>
+      <Armor arm_armor="20"
+             covers_hands="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+  </Item>
+  <Item multiplayer_item="true"
+        id="plateboot"
+        name="{=Sergeantplateboots}Sergeant Plate Boots"
+        mesh="plateboot"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="0.9"
+        Type="LegArmor">
+    <ItemComponent>
+      <Armor leg_armor="20"
+             covers_legs="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+  </Item>
+
+
+  <Item multiplayer_item="true"
+        id="english_longbow_tunic_a"
+        name="{=Englishsergeantarmor}English longbowmen"
+        mesh="english_longbow_tunic_a"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="11"
+             leg_armor="3"
+             arm_armor="2"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false"
+           Civilian="true" />
+  </Item>
+
+<Item multiplayer_item="true"
+        id="french_crossbow_armor"
+        name="{=asas}french_crossbow_armor"
+        mesh="french_crossbow_armor"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="42"
+             leg_armor="3"
+             arm_armor="2"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="false"
+           Civilian="true" />
+  </Item>
+<!-- Fransız xbow-->
+<Item multiplayer_item="true"
+        id="mk_xbox_helmet"
+        name="{=frenchxbowmenhelmet}French Xboxmen Helmet"
+        mesh="vlandia_helmet_i_a"
+        culture="Culture.neutral_culture"
+        value="999"
+        is_merchandise="false"
+        weight="2.9"
+        Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="32"
+             has_gender_variations="false"
+             hair_cover_type="all"
+             beard_cover_type="type3"
+             modifier_group="chain"
+             material_type="Chainmail" />
+    </ItemComponent>
+    <Flags />
+  </Item>
+<Item multiplayer_item="true"
+        id="bohemia_heraldic"
+        name="{=aasas}Bohemia Heraldic Armor"
+        mesh="bohemia_heraldic"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="48"
+             leg_armor="7"
+             arm_armor="5"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true"
+           Civilian="true" />
+  </Item>
+
+<Item multiplayer_item="true"
+        id="england_heavy"
+        name="{=England}England Heraldic Armor"
+        mesh="england_heavy"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="48"
+             leg_armor="7"
+             arm_armor="5"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true"
+           Civilian="true" />
+  </Item>
+  
+  <Item multiplayer_item="true"
+        id="french_tunic"
+        name="{=fr}French Tunic"
+        mesh="french_tunic"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="37"
+             leg_armor="7"
+             arm_armor="5"
+             covers_body="true"
+             modifier_group="leather"
+             material_type="Leather" />
+    </ItemComponent>
+    <Flags UseTeamColor="true"
+           Civilian="true" />
+  </Item>
+<Item multiplayer_item="true"
+        id="teutonic_armor"
+        name="{=teut}teutonic armor"
+        mesh="teutonic_armor"
+        culture="Culture.neutral_culture"
+        subtype="body_armor"
+        value="999"
+        is_merchandise="false"
+        weight="8"
+        Type="BodyArmor">
+    <ItemComponent>
+      <Armor body_armor="48"
+             leg_armor="7"
+             arm_armor="5"
+             covers_body="true"
+             modifier_group="plate"
+             material_type="Plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true"
+           Civilian="true" />
+  </Item>
+  
+</Items>

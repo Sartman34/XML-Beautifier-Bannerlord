@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string id="str_multiplayer_official_game_type_name.MKBattle" text="{=mkbattle_name}MKBattle" />
+	<string id="str_multiplayer_official_game_type_explainer.MKBattle" text="{=ItmPmlWH}·   Buy one spawn using gold{newline}·   Hold control points on the map to deplete enemy morale{newline}·   Kill the entire enemy team or exhaust their morale to win" />
+	<string id="str_multiplayer_game_type.MKBattle" text="{=mkbattle_type}MKBattle" />
+</strings>
